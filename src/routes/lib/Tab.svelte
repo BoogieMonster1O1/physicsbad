@@ -2,7 +2,7 @@
 <script>
     import { getContext } from 'svelte';
     import { TABS } from './TabView.svelte';
-    import Fa from 'svelte-fa'
+    import Fa from 'svelte-fa/src/fa.svelte'
     export let icon
     export let name
     const tab = {};

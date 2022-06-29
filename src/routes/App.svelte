@@ -1,13 +1,13 @@
 <script>
     import {TabView, TabList, TabPanel, Tab} from "./lib/tabs.ts";
-    import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-    import {faPencilRuler} from "@fortawesome/free-solid-svg-icons";
+    import {faMagnifyingGlass, faPencilRuler} from "@fortawesome/free-solid-svg-icons/index.es";
     import OpticsUV from "./opticsuv/OpticsUV.svelte";
     import MeterBridge from "./meterbridge/MeterBridge.svelte";
 </script>
 
 <svelte:head>
     <title>{`potatoes`}</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </svelte:head>
 
 <main>
