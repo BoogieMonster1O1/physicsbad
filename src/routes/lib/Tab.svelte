@@ -1,10 +1,13 @@
-<script lang="ts">
-    import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-    import { currentTab } from "./stores";
-    import Fa from "svelte-fa";
-    export let icon: IconDefinition;
-    export let name: string;
-    export let route: string;
+
+<script>
+    import { getContext } from 'svelte';
+    import { TABS } from './TabView.svelte';
+    import Fa from 'svelte-fa'
+    export let icon
+    export let name
+    const tab = {};
+    const { registerTab, selectTab, selectedTab } = getContext(TABS);
+    registerTab(tab);
 </script>
 
 <style>
@@ -13,7 +16,9 @@
     }
 </style>
 
-<div on:click={() => location.hash = `#/${route}`} class:selected={$currentTab == route} class="w-32 flex flex-col md:flex-row items-center text-lg transition-colors select-none">
-    <Fa icon={icon} class="md:px-1.5"/>
-    <span class="md:-px-1.5">{name}</span>
+<div class:selected="{$selectedTab === tab}" class="flex basis-1/2 border-none justify-center items-center" on:click="{() => selectTab(tab)}">
+    <div class="flex flex-col text-2xl">
+        <Fa icon={icon}/>
+        <div class="text-xl">{name}</div>
+    </div>
 </div>

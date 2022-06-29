@@ -1,5 +1,5 @@
 <script>
-    import {generateReadings, truncateTwo, chadRound} from "./calc.ts"
+    import {generateReadings, chadRound} from "./calc.ts"
 
     let numberOfReadings = null;
     let desiredFocalLength = null;
