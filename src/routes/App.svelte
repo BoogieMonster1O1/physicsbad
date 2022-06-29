@@ -1,12 +1,31 @@
 <script>
-    import Calculator from "./Calculator.svelte";
+    import Router from "svelte-spa-router";
+    import TabView from "./lib/TabView.svelte";
+    import Tab from "./lib/Tab.svelte";
+    import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+
+    const routes = {
+        '/': wrap({
+            asyncComponent: () => import('./OpticsUVCalculator.svelte')
+        }),
+        '/opticsuv': wrap({
+            asyncComponent: () => import('./OpticsUVCalculator.svelte')
+        }),
+        '*': wrap({
+            asyncComponent: () => import('./OpticsUVCalculator.svelte')
+        })
+    };
 </script>
+
+<svelte:head>
+    <title>{`potatoes`}</title>
+</svelte:head>
 
 <div class="flex flex-col font-epicfont justify-center text-center pt-4">
     <div class="text-5xl"><h1>Readings Generator</h1></div>
     <div class="text-2xl"><h1>Be smart, not hardworking.</h1></div>
     <br><br>
-    <Calculator/>
+    <Router {routes}/>
     <br><br>
     <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
         What the heck is this?
@@ -23,4 +42,8 @@
     <div class="text-xs">
         Copyright © Shrish Deshpande. MIT Licensed.
     </div>
+    <br><br>
+    <TabView>
+        <Tab name="Optics UV" icon={faMagnifyingGlass} route=""/>
+    </TabView>
 </div>
