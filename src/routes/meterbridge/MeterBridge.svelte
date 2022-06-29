@@ -15,7 +15,7 @@
         if (numberOfReadings > 8) {
             numberOfReadings = 8;
         }
-        readings = generateReadings(desiredResistance, numberOfReadings);
+        readings = generateReadings(desiredResistance, numberOfReadings).sort((a, b) => a.resistanceBox > b.resistanceBox ? 1 : -1);
         averageResistance = chadRound((readings.map(reading => reading.unknown).reduce((a, b) => a + b)) / readings.length, 2);
     }
 </script>

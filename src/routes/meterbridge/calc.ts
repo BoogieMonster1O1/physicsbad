@@ -17,9 +17,9 @@ export function calculateUnknown(resistanceBox: number, length: number): number 
 
 export function generateReadings(unknown: number, numberOfReadings: number): ResistanceReading[] {
     let readings: ResistanceReading[] = [];
-    const resistances = getRandomIntegers(1, 20, numberOfReadings); // Resistance box goes from 1 ohm to 20 ohm
+    const resistances = getRandomIntegers(1, 19, numberOfReadings); // Resistance box goes from 1 ohm to 20 ohm
     for (let i = 0; i < numberOfReadings; i++) {
-        const error = randInt(-2, 2) / 10;
+        const error = randInt(-1, 1) / 10;
         const resistance = resistances[i];
         const length = getMeterBridgeL(resistance, unknown + error);
         readings.push({
