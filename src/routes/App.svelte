@@ -1,6 +1,6 @@
 <script>
     import {TabView, TabList, TabPanel, Tab} from "./lib/tabs.ts";
-    import {faGlasses, faPencilRuler} from "@fortawesome/free-solid-svg-icons";
+    import icons from "@fortawesome/free-solid-svg-icons";
     import OpticsUV from "./opticsuv/OpticsUV.svelte";
     import MeterBridge from "./meterbridge/MeterBridge.svelte";
 </script>
@@ -21,8 +21,8 @@
         <br><br>
         <TabView>
             <TabList>
-                <Tab name="Optics UV" icon={faGlasses} />
-                <Tab name="Meter Bridge" icon={faPencilRuler} />
+                <Tab name="Optics UV" icon={icons.faMagnifyingGlass} />
+                <Tab name="Meter Bridge" icon={icons.faPencilRuler} />
             </TabList>
 
             <TabPanel>
