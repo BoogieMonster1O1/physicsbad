@@ -1,20 +1,8 @@
 <script>
     import wrap from "svelte-spa-router/wrap"
     import { TabView, TabList, TabPanel, Tab } from "./lib/tabs.ts";
-    import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+    import {faMagnifyingGlass, faPencilRuler} from "@fortawesome/free-solid-svg-icons";
     import OpticsUV from "./OpticsUV.svelte";
-
-    const routes = {
-        '/': wrap({
-            asyncComponent: () => import('./OpticsUV.svelte')
-        }),
-        '/opticsuv': wrap({
-            asyncComponent: () => import('./OpticsUV.svelte')
-        }),
-        '*': wrap({
-            asyncComponent: () => import('./OpticsUV.svelte')
-        })
-    };
 </script>
 
 <svelte:head>
@@ -28,20 +16,21 @@
         <br><br>
         <br><br>
         <br>
-        <div class="text-xs">
-            Copyright © Shrish Deshpande. MIT Licensed.
-        </div>
         <br><br>
         <TabView>
             <TabList>
                 <Tab name="Optics UV" icon={faMagnifyingGlass} />
+                <Tab name="Meter Bridge" icon={faPencilRuler} />
             </TabList>
 
             <TabPanel>
                 <OpticsUV/>
             </TabPanel>
 
-            <br><br>
+            <TabPanel>
+                <OpticsUV/> <!-- TODO -->
+            </TabPanel>
+
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
                 What the heck is this?
@@ -54,6 +43,11 @@
                 <br>
                 <div class="text-s">Source Code: <a href="https://github.com/BoogieMonster1O1/physicsbad" target="_blank" class="text-blue-600">Github</a></div>
             </div>
+            <div class="text-xs">
+                Copyright © Shrish Deshpande. MIT Licensed.
+            </div>
+            <br><br>
+            <br><br>
         </TabView>
     </div>
 </main>
