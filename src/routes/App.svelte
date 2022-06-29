@@ -1,6 +1,7 @@
 <script>
     import {TabView, TabList, TabPanel, Tab} from "./lib/tabs.ts";
-    import {faMagnifyingGlass, faPencilRuler} from "@fortawesome/free-solid-svg-icons";
+    import pkg from '@fortawesome/free-solid-svg-icons';
+    const { faMagnifyingGlass, faPencilRuler } = pkg;
     import OpticsUV from "./opticsuv/OpticsUV.svelte";
     import MeterBridge from "./meterbridge/MeterBridge.svelte";
 </script>
