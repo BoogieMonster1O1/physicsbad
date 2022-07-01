@@ -17,8 +17,7 @@
             <div class="text-2xl"><h1>Be smart, not hardworking.</h1></div>
         </header>
         <br><br>
-        <br><br>
-        <br>
+        <br><br><br>
         <br><br>
         <TabView>
             <TabList>
