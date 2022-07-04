@@ -1,6 +1,6 @@
 <script>
     import {TabView, TabList, TabPanel, Tab} from "./lib/tabs.ts";
-    import {faMagnifyingGlass, faPencilRuler, faNetworkWired} from "@fortawesome/free-solid-svg-icons/index.es";
+    import {faMagnifyingGlass, faPencilRuler, faNetworkWired, faMagnifyingGlassLocation} from "@fortawesome/free-solid-svg-icons/index.es";
     import OpticsUV from "./opticsuv/OpticsUV.svelte";
     import MeterBridge from "./meterbridge/MeterBridge.svelte";
 </script>
@@ -24,6 +24,7 @@
                 <Tab name="Optics UV" icon={faMagnifyingGlass} />
                 <Tab name="Meter Bridge" icon={faPencilRuler} />
                 <Tab name="Resistance/Length" icon={faNetworkWired} />
+                <Tab name="Optics Disp." icon={faMagnifyingGlassLocation} />
             </TabList>
 
             <TabPanel>
@@ -36,6 +37,10 @@
 
             <TabPanel>
                 <MeterBridge/> <!--TODO-->
+            </TabPanel>
+
+            <TabPanel>
+                <OpticsUV/> <!--TODO-->
             </TabPanel>
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
