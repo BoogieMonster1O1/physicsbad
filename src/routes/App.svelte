@@ -3,6 +3,7 @@
     import {faMagnifyingGlass, faPencilRuler, faBolt, faMagnifyingGlassLocation} from "@fortawesome/free-solid-svg-icons/index.es";
     import OpticsUV from "./opticsuv/OpticsUV.svelte";
     import MeterBridge from "./meterbridge/MeterBridge.svelte";
+    import OpticsDisplacement from "./opticsdistance/OpticsDisplacement.svelte";
 </script>
 
 <svelte:head>
@@ -40,7 +41,7 @@
             </TabPanel>
 
             <TabPanel>
-                <OpticsUV/> <!--TODO-->
+                <OpticsDisplacement/> <!--TODO-->
             </TabPanel>
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
