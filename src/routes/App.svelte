@@ -41,7 +41,7 @@
             </TabPanel>
 
             <TabPanel>
-                <OpticsDisplacement/> <!--TODO-->
+                <OpticsDisplacement/>
             </TabPanel>
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
