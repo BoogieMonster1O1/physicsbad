@@ -1,3 +1,4 @@
 export type Reading = {
-    focalLength: number; // TODO
+    focalLength: number;
+    firstPos: number;
 }
