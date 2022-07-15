@@ -24,7 +24,7 @@
             <TabList>
                 <Tab name="Optics UV" icon={faMagnifyingGlass} />
                 <Tab name="Meter Bridge" icon={faPencilRuler} />
-                <Tab name="Resistance/Length" icon={faBolt} />
+<!--                <Tab name="Resistance/Length" icon={faBolt} />-->
                 <Tab name="Optics Distance" icon={faMagnifyingGlassLocation} />
             </TabList>
 
@@ -36,12 +36,12 @@
                 <MeterBridge/>
             </TabPanel>
 
-            <TabPanel>
-                <MeterBridge/> <!--TODO-->
-            </TabPanel>
+<!--            <TabPanel>-->
+<!--                <MeterBridge/> &lt;!&ndash;TODO&ndash;&gt;-->
+<!--            </TabPanel>-->
 
             <TabPanel>
-                <OpticsDisplacement/> <!--TODO-->
+                <OpticsDisplacement/>
             </TabPanel>
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">

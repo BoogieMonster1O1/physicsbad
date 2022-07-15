@@ -1,13 +1,19 @@
 <script>
+    import {generateReadings} from "./calc";
+    import {chadRound} from "../mathutil";
+
     let numberOfReadings = null;
     let desiredFocalLength = null;
+    let readings = null;
+    let averageFocus = 0;
 
     function generate() {
         if (numberOfReadings == null || desiredFocalLength == null) {
             alert("Please enter appropriate values!");
             return;
         }
-        // TODO
+        readings = generateReadings(desiredFocalLength, numberOfReadings);
+        averageFocus = chadRound((readings.map(reading => reading.focalLength).reduce((a, b) => a + b)) / readings.length, 2);
     }
 </script>
 
@@ -19,6 +25,41 @@
         <div class="m-4 text-2xl"><button on:click="{generate}" type="button" class="bg-red-500 px-5 text-white rounded">Generate</button></div>
     </div>
     <br><br>
-    <!--TODO-->
+    {#if readings != null}
+        <div class="flex justify-center">
+            <table class="border border-gray-400 lg:text-xl">
+                <tr class="bg-blue-100 border border-gray-400">
+                    <td class="px-7">d1</td>
+                    <td class="px-7">d2</td>
+                    <td class="px-7">d</td>
+                    <td class="px-7">x</td>
+                    <td class="px-7">f</td>
+                </tr>
+                {#each readings as reading}
+                    <tr class="border border-gray-300">
+                        <td>{reading.firstPos}</td>
+                        <td>{reading.secondPos}</td>
+                        <td>{reading.distance}</td>
+                        <td>{reading.objectImageDistance}</td>
+                        <td>{reading.focalLength}</td>
+                    </tr>
+                {/each}
+            </table>
+        </div>
+        <br>
+        <div>
+            <div class="justify-center">
+                <ul>
+                    <li>d1 - First lens position</li>
+                    <li>d2 - Second lens position</li>
+                    <li>d - Distance between lens positions</li>
+                    <li>x - Distance between object and image</li>
+                    <li>f - Focal length</li>
+                </ul>
+            </div>
+        </div>
+        <div><h1>All values are in centimeters unless otherwise stated.</h1></div>
+        <div><h1>Average Focus: {averageFocus}</h1></div>
+    {/if}
     <br><br>
 </div>

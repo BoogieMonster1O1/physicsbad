@@ -39,6 +39,11 @@ export function getRandomIntegers(lowerLimit: number, upperLimit: number, count:
     return numbers.sort((a, b) => a > b ? b : a);
 }
 
+
+export function error(): number {
+    return chadRound((Math.random() - 0.5) * 1.5, 2);
+}
+
 export function exists(numbers: number[], num: number): boolean {
     for (let i = 0; i < numbers.length; i++) {
         if (num == numbers[i]) {
