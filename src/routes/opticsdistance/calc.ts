@@ -1,4 +1,4 @@
-import {chadRound} from "../mathutil";
+import {chadRound, error} from "../mathutil";
 
 export type Reading = {
     firstPos: number;
@@ -34,8 +34,8 @@ export function generateReadings(focalLength: number, count: number): Reading[] 
     for (let i = 0; i < count; i++) {
         const x = xes[i];
         const d: number = distance(x, focalLength);
-        const dOne = chadRound(d1(x, d), 1);
-        const dTwo = chadRound(d2(x, d), 1);
+        const dOne = chadRound(chadRound(d1(x, d), 1) + error(), 1);
+        const dTwo = chadRound(chadRound(d2(x, d), 1) + error(), 1);
         const newD = chadRound(dTwo - dOne, 1);
         const newFocus = chadRound(focus(x, newD), 2);
         readings.push({

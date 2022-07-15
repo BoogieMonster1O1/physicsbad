@@ -1,10 +1,10 @@
-<script lang="ts">
-    import {generateReadings, Reading} from "./calc";
+<script>
+    import {generateReadings} from "./calc";
     import {chadRound} from "../mathutil";
 
     let numberOfReadings = null;
     let desiredFocalLength = null;
-    let readings: Reading[] = null;
+    let readings = null;
     let averageFocus = 0;
 
     function generate() {
