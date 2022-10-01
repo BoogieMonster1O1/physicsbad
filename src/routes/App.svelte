@@ -4,6 +4,7 @@
     import OpticsUV from "./opticsuv/OpticsUV.svelte";
     import MeterBridge from "./meterbridge/MeterBridge.svelte";
     import OpticsDisplacement from "./opticsdistance/OpticsDisplacement.svelte";
+    import Resistance from "./resistance/Resistance.svelte";
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@
             <TabList>
                 <Tab name="Optics UV" icon={faMagnifyingGlass} />
                 <Tab name="Meter Bridge" icon={faPencilRuler} />
-<!--                <Tab name="Resistance/Length" icon={faBolt} />-->
+                <Tab name="Resistance/Length" icon={faBolt} />
                 <Tab name="Optics Distance" icon={faMagnifyingGlassLocation} />
             </TabList>
 
@@ -36,9 +37,9 @@
                 <MeterBridge/>
             </TabPanel>
 
-<!--            <TabPanel>-->
-<!--                <MeterBridge/> &lt;!&ndash;TODO&ndash;&gt;-->
-<!--            </TabPanel>-->
+            <TabPanel>
+                <Resistance/> <!--TODO-->
+            </TabPanel>
 
             <TabPanel>
                 <OpticsDisplacement/>
