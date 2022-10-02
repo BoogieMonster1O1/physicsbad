@@ -25,33 +25,4 @@
         <div class="m-4 text-2xl"><button on:click="{generate}" type="button" class="bg-red-500 px-5 text-white rounded">Generate</button></div>
     </div>
     <br><br>
-
-
-    <!--                    <td>{chadRound(reading.aObjectPos, 1)}</td>-->
-    <!--                    <td>{chadRound(reading.cImagePos, 1)}</td>-->
-    <!--                    <td>{chadRound(reading.bLensPos, 1)}</td>-->
-    <!--                    <td>{chadRound(reading.uObjectDistance, 1)}</td>-->
-    <!--                    <td>{chadRound(reading.vImageDistance, 1)}</td>-->
-    <!--                    <td>{chadRound(reading.focalLength, 2)}</td>-->
-    <!--                </tr>-->
-    <!--            {/each}-->
-    <!--        </table>-->
-    <!--    </div>-->
-    <!--    <br>-->
-    <!--    <div>-->
-    <!--        <div class="justify-center">-->
-    <!--            <ul>-->
-    <!--                <li>a - Position of object on scale</li>-->
-    <!--                <li>b - Position of image on scale</li>-->
-    <!--                <li>c - Position of lens on scale</li>-->
-    <!--                <li>u - Distance from lens to object</li>-->
-    <!--                <li>v - Distance from lens to image</li>-->
-    <!--                <li>f - Focal length</li>-->
-    <!--            </ul>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--    <div><h1>All values are in centimeters unless otherwise stated.</h1></div>-->
-    <!--    <div><h1>Average Focus: {averageFocus}</h1></div>-->
-    <!--{/if}-->
-    <br><br>
 </div>
