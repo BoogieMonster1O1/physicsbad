@@ -25,5 +25,4 @@
         <div class="m-4 text-2xl"><button on:click="{generate}" type="button" class="bg-red-500 px-5 text-white rounded">Generate</button></div>
     </div>
     <br><br>
-    <br><br>
 </div>
