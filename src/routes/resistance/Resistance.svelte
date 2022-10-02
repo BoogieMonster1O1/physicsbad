@@ -25,19 +25,8 @@
         <div class="m-4 text-2xl"><button on:click="{generate}" type="button" class="bg-red-500 px-5 text-white rounded">Generate</button></div>
     </div>
     <br><br>
-    <!--{#if readings != null}-->
-    <!--    <div class="flex justify-center">-->
-    <!--        <table class="border border-gray-400 lg:text-xl">-->
-    <!--            <tr class="bg-blue-100 border border-gray-400">-->
-    <!--                <td class="px-7">a</td>-->
-    <!--                <td class="px-7">b</td>-->
-    <!--                <td class="px-7">c</td>-->
-    <!--                <td class="px-7">u</td>-->
-    <!--                <td class="px-7">v</td>-->
-    <!--                <td class="px-7">f</td>-->
-    <!--            </tr>-->
-    <!--            {#each readings as reading}-->
-    <!--                <tr class="border border-gray-300">-->
+
+
     <!--                    <td>{chadRound(reading.aObjectPos, 1)}</td>-->
     <!--                    <td>{chadRound(reading.cImagePos, 1)}</td>-->
     <!--                    <td>{chadRound(reading.bLensPos, 1)}</td>-->
