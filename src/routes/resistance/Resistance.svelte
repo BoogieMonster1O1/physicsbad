@@ -26,14 +26,7 @@
     </div>
     <br><br>
 
-    <!--                <td class="px-7">b</td>-->
-    <!--                <td class="px-7">c</td>-->
-    <!--                <td class="px-7">u</td>-->
-    <!--                <td class="px-7">v</td>-->
-    <!--                <td class="px-7">f</td>-->
-    <!--            </tr>-->
-    <!--            {#each readings as reading}-->
-    <!--                <tr class="border border-gray-300">-->
+
     <!--                    <td>{chadRound(reading.aObjectPos, 1)}</td>-->
     <!--                    <td>{chadRound(reading.cImagePos, 1)}</td>-->
     <!--                    <td>{chadRound(reading.bLensPos, 1)}</td>-->
