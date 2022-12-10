@@ -7,6 +7,8 @@
     import ResistanceLength from "./e2_resistancelength/ResistanceLength.svelte";
     import CompareEmf from "./e5_compareemf/CompareEmf.svelte";
     import InternalResistance from "./e6_internalresistance/InternalResistance.svelte";
+    import PotentialGradient from "./e7_potentialgradient/PotentialGradient.svelte";
+    import OpticsCoaxial from "./e8_opticscoaxial/OpticsCoaxial.svelte";
 </script>
 
 <svelte:head>
@@ -31,6 +33,8 @@
                 <Tab name="4" icon={faMagnifyingGlassLocation} />
                 <Tab name="5" icon={faBolt} />
                 <Tab name="6" icon={faBolt} />
+                <Tab name="7" icon={faBolt} />
+                <Tab name="8" icon={faBolt} />
             </TabList>
 
             <TabPanel>
@@ -55,6 +59,14 @@
 
             <TabPanel>
                 <InternalResistance/>
+            </TabPanel>
+
+            <TabPanel>
+                <PotentialGradient/>
+            </TabPanel>
+
+            <TabPanel>
+                <OpticsCoaxial/>
             </TabPanel>
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
