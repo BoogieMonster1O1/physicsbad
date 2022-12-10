@@ -1,9 +1,11 @@
 <script>
     import {TabView, TabList, TabPanel, Tab} from "./lib/tabs.ts";
     import {faMagnifyingGlass, faPencilRuler, faBolt, faMagnifyingGlassLocation} from "@fortawesome/free-solid-svg-icons/index.es";
-    import OpticsUV from "./opticsuv/OpticsUV.svelte";
-    import MeterBridge from "./meterbridge/MeterBridge.svelte";
-    import OpticsDisplacement from "./opticsdistance/OpticsDisplacement.svelte";
+    import OpticsUV from "./e3_opticsuv/OpticsUV.svelte";
+    import MeterBridge from "./e1_meterbridge/MeterBridge.svelte";
+    import OpticsDisplacement from "./e4_opticsdisplacement/OpticsDisplacement.svelte";
+    import ResistanceLength from "./e2_resistancelength/ResistanceLength.svelte";
+    import CompareEmf from "./e5_compareemf/CompareEmf.svelte";
 </script>
 
 <svelte:head>
@@ -22,26 +24,31 @@
         <br><br>
         <TabView>
             <TabList>
-                <Tab name="Optics UV" icon={faMagnifyingGlass} />
-                <Tab name="Meter Bridge" icon={faPencilRuler} />
-<!--                <Tab name="Resistance/Length" icon={faBolt} />-->
-                <Tab name="Optics Distance" icon={faMagnifyingGlassLocation} />
+                <Tab name="1" icon={faBolt} />
+                <Tab name="2" icon={faPencilRuler} />
+                <Tab name="3" icon={faMagnifyingGlass} />
+                <Tab name="4" icon={faMagnifyingGlassLocation} />
+                <Tab name="5" icon={faBolt} />
             </TabList>
+
+            <TabPanel>
+                <MeterBridge/>
+            </TabPanel>
+
+            <TabPanel>
+                <ResistanceLength/> <!--TODO: implement this-->
+            </TabPanel>
 
             <TabPanel>
                 <OpticsUV/>
             </TabPanel>
 
             <TabPanel>
-                <MeterBridge/>
+                <OpticsDisplacement/>
             </TabPanel>
 
-<!--            <TabPanel>-->
-<!--                <MeterBridge/> &lt;!&ndash;TODO&ndash;&gt;-->
-<!--            </TabPanel>-->
-
             <TabPanel>
-                <OpticsDisplacement/>
+                <CompareEmf/>
             </TabPanel>
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
