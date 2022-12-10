@@ -6,6 +6,7 @@
     import OpticsDisplacement from "./e4_opticsdisplacement/OpticsDisplacement.svelte";
     import ResistanceLength from "./e2_resistancelength/ResistanceLength.svelte";
     import CompareEmf from "./e5_compareemf/CompareEmf.svelte";
+    import InternalResistance from "./e6_internalresistance/InternalResistance.svelte";
 </script>
 
 <svelte:head>
@@ -29,6 +30,7 @@
                 <Tab name="3" icon={faMagnifyingGlass} />
                 <Tab name="4" icon={faMagnifyingGlassLocation} />
                 <Tab name="5" icon={faBolt} />
+                <Tab name="6" icon={faBolt} />
             </TabList>
 
             <TabPanel>
@@ -49,6 +51,10 @@
 
             <TabPanel>
                 <CompareEmf/>
+            </TabPanel>
+
+            <TabPanel>
+                <InternalResistance/>
             </TabPanel>
 
             <div class="text-3xl lg:pl-40 lg:pr-40 lg:text-left">
